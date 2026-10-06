@@ -1,0 +1,7 @@
+{
+  "name": "Finders Guild",
+  "description": "Private deal-making and professional matchmaking network. Submit your process criteria or join the vetted community to access aligned off-market deal flow.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0B0C0E;
+  --color-porcelain: #F7F7F5;
+  --color-graphite: #2B2F33;
+  --color-gold: #C9A76A;
+  --color-aurora: #6BA6FF;
+  --color-mist: #E7EAEF;
+
+  --font-cinzel: 'Cinzel', Georgia, serif;
+  --font-crimson: 'Crimson Pro', Georgia, serif;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif-display: 'Cinzel', Georgia, serif;
+  --font-serif-ancient: 'Cormorant Garamond', Georgia, serif;
+  --font-serif-editorial: 'Newsreader', Georgia, serif;
+  --font-sans-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-serif-display: 'Cinzel', Georgia, serif;
+    --font-serif-ancient: 'Cormorant Garamond', Georgia, serif;
+    --font-serif-editorial: 'Newsreader', Georgia, serif;
+    --font-sans-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Explicit Utility Classes for Semantic Tokens */
+.bg-ink { background-color: #0B0C0E; }
+.text-ink { color: #0B0C0E; }
+.border-ink { border-color: #0B0C0E; }
+
+.bg-porcelain { background-color: #F7F7F5; }
+.text-porcelain { color: #F7F7F5; }
+.border-porcelain { border-color: #F7F7F5; }
+
+.bg-graphite { background-color: #2B2F33; }
+.text-graphite { color: #2B2F33; }
+.border-graphite { border-color: #2B2F33; }
+
+.bg-gold { background-color: #C9A76A; }
+.text-gold { color: #C9A76A; }
+.border-gold { border-color: #C9A76A; }
+
+.bg-aurora { background-color: #6BA6FF; }
+.text-aurora { color: #6BA6FF; }
+.border-aurora { border-color: #6BA6FF; }
+
+.bg-mist { background-color: #E7EAEF; }
+.text-mist { color: #E7EAEF; }
+.border-mist { border-color: #E7EAEF; }
+
+.font-cinzel { font-family: 'Cinzel', Georgia, serif; }
+.font-crimson { font-family: 'Crimson Pro', Georgia, serif; }
+.font-inter { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+.font-serif-display {
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.05em;
+}
+
+.font-serif-ancient {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-serif-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(5, 8, 17, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* High-craft vector backdrop utilities */
+.bg-radial-guild {
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, rgba(139, 92, 246, 0.04) 35%, rgba(4, 7, 17, 0) 70%);
+}
+
+.bg-radial-subtle {
+  background: radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.06) 0%, rgba(4, 7, 17, 0) 50%);
+}
+
+.bg-radial-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, rgba(4, 7, 17, 0) 65%);
+}
+
+.glass-panel {
+  background: rgba(8, 14, 29, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(11, 19, 39, 0.85);
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.6), 0 0 24px -4px rgba(16, 185, 129, 0.12);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* Liquid flow animations for interactive deal-flow diagrams */
+@keyframes liquidFlow {
+  from {
+    stroke-dashoffset: 60;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-liquid-flow {
+  animation: liquidFlow 2.4s linear infinite;
+}
+
+.animate-liquid-flow-slow {
+  animation: liquidFlow 4s linear infinite;
+}
+
+.animate-liquid-flow-fast {
+  animation: liquidFlow 1.5s linear infinite;
+}
+
+@keyframes liquidDropletPulse {
+  0%, 100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-droplet {
+  animation: liquidDropletPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes smoothTransformGlow {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(244, 63, 94, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 14px rgba(16, 185, 129, 0.9));
+  }
+}
+
+.animate-transform-glow {
+  animation: smoothTransformGlow 3s ease-in-out infinite alternate;
+}
+
